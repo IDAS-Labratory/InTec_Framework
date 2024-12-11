@@ -1,0 +1,29 @@
+# syntax=docker/dockerfile:1
+FROM python:3.8-bullseye
+
+WORKDIR /sensor
+
+RUN pip3 install pip --upgrade
+
+RUN pip3 install apt-mirror-updater
+RUN apt-mirror-updater --auto-change-mirror
+RUN apt-get -y --no-install-recommends install cmake
+RUN apt-get install -y --no-install-recommends libstdc++6 gfortran libopenblas-dev liblapack-dev g++
+
+RUN pip3 install cython numpy
+RUN pip3 install --default-timeout=200 --no-cache-dir scikit-learn
+RUN pip3 install --default-timeout=200 --no-cache-dir pandas 
+RUN pip3 install --default-timeout=200 tflite-runtime paho-mqtt
+
+RUN apt-get remove -y g++ && rm -rf /var/lib/apt/lists/*
+COPY . .
+
+ENV Name /sensor
+ENV Subject /subject1
+ENV Broker /192.168.1.20
+ENV Topic /prediction
+ENV WindowSize /25
+ENV Rate /50
+ENV Time /15
+
+CMD ["python3", "inference.py"]

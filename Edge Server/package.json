@@ -1,0 +1,50 @@
+{
+  "name": "p03_apatura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "service": "node server/service_core/main.js"
+  },
+  "keywords": [
+    "Edge-AI",
+    "ML Pipeline",
+    "Internet of Things",
+    "Fremework"
+  ],
+  "Developer_Teams": "IDAS Lab Main team",
+  "dependencies": {
+    "@lapo/asn1js": "^1.1.0",
+    "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
+    "base64url": "^3.0.1",
+    "cbor": "^5.0.2",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "elliptic": "^6.5.2",
+    "express": "^4.17.1",
+    "ioredis": "^4.24.5",
+    "jsonschema": "1.2.6",
+    "jsrsasign": "^8.0.15",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7",
+    "mosca": "^2.8.3",
+    "mqtt": "^4.2.6",
+    "node-rsa": "^1.0.8",
+    "redis": "^3.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*"
+    ],
+    "watch": [
+      "server/service_core/*"
+    ]
+  }
+}
