@@ -12,11 +12,11 @@ The InTeC implementations are evaluated and compared against related works in th
 
 # InTec Pipeline
 
-![InTeC Framework Pipeline](https://github.com/hlarian/InTeC_Framework/blob/0488dc5cfa1024b5793774173853cdc9ca2a5d05/Diagrams/pipeline.png)
+![InTeC Framework Pipeline](https://github.com/IDAS-Labratory/InTec_Framework/blob/master/Diagrams/pipeline.png)
 
 # InTec Architecture
 
-![InTeC Framework Architecture](https://github.com/hlarian/InTeC_Framework/blob/0488dc5cfa1024b5793774173853cdc9ca2a5d05/Diagrams/architecture.png)
+![InTeC Framework Architecture](https://github.com/IDAS-Labratory/InTec_Framework/blob/master/Diagrams/architecture.png)
 
 
 ## Table of Contents
